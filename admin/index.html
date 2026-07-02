@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>后台管理 - 索拉瑞科</title>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <style>
+    /* Override Decap CMS styles for better Chinese UI */
+    :root {
+      --primary: #4a9e4f;
+    }
+    [class*="AppHeader"] {
+      background: #1a1a2e !important;
+    }
+    [class*="SidebarContainer"] {
+      background: #16213e !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Register custom widget for JSON file editing
+    CMS.init();
+  </script>
+</body>
+</html>
