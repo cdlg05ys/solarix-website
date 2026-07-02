@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新闻动态 - 索拉瑞科（成都）新能源科技</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .news-page { padding: 120px 0 60px; }
+  .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; margin-top: 40px; }
+  .news-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+  .news-card:hover { transform: translateY(-4px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+  .news-card-img { height: 200px; background: #e8f5e9; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+  .news-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .news-card-body { padding: 20px; }
+  .news-card-body h3 { font-size: 18px; margin-bottom: 8px; color: #1a1a2e; }
+  .news-card-body .news-date { font-size: 13px; color: #999; margin-bottom: 12px; }
+  .news-card-body .news-summary { font-size: 14px; color: #666; line-height: 1.6; }
+  .news-detail { display: none; }
+  .news-detail.open { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 2000; padding: 40px; overflow-y: auto; }
+  .news-detail-inner { max-width: 800px; margin: 60px auto; background: #fff; border-radius: 16px; padding: 40px; position: relative; }
+  .news-detail-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; border: none; background: #f0f0f0; font-size: 18px; cursor: pointer; }
+  .news-detail-inner h2 { font-size: 26px; margin-bottom: 12px; color: #1a1a2e; }
+  .news-detail-inner .news-date { color: #999; margin-bottom: 24px; }
+  .news-detail-inner .news-body { font-size: 16px; line-height: 1.8; color: #333; }
+  .news-empty { text-align: center; padding: 80px 20px; color: #999; }
+  .news-empty .icon { font-size: 64px; margin-bottom: 16px; }
+  .search-bar { margin-bottom: 24px; }
+  .search-bar input { width: 100%; max-width: 400px; padding: 12px 16px; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 15px; outline: none; }
+  .search-bar input:focus { border-color: #4a9e4f; }
+</style>
+</head>
+<body>
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="logo-img">
+      <span class="logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="business.html">核心业务</a></li>
+      <li><a href="tech.html">技术实力</a></li>
+      <li><a href="news.html">新闻动态</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="news-page">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">NEWS</div>
+      <h2 class="section-title">新闻<span class="hl">动态</span></h2>
+      <p class="section-subtitle">了解索拉瑞科最新资讯与行业动态</p>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="newsSearch" placeholder="搜索新闻...">
+    </div>
+    <div class="news-grid" id="newsGrid">
+      <div class="news-empty">
+        <div class="icon">📰</div>
+        <p>暂无新闻动态</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="news-detail" id="newsDetail">
+  <div class="news-detail-inner">
+    <button class="news-detail-close" id="newsDetailClose">✕</button>
+    <h2 id="detailTitle"></h2>
+    <div class="news-date" id="detailDate"></div>
+    <div class="news-body" id="detailBody"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="footer-logo-img">
+          <span class="footer-logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="business.html">核心业务</a></li>
+          <li><a href="tech.html">技术实力</a></li>
+          <li><a href="news.html">新闻动态</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>业务板块</h4>
+        <ul>
+          <li><a href="business.html">光伏发电系统</a></li>
+          <li><a href="business.html">储能系统集成</a></li>
+          <li><a href="business.html">电梯节能</a></li>
+          <li><a href="business.html">光储充一体化</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>联系方式</h4>
+        <ul>
+          <li><a data-c="email">like@gcsemi.cn</a></li>
+          <li><a data-c="address">四川省成都市双流区隆和西巷299号11楼1101号</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-c="copyright_year">2026</span> <span data-c="company_full">索拉瑞科（成都）新能源科技有限公司</span> 版权所有</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+<script src="js/content-loader.js"></script>
+<script>
+(function() {
+  var menuToggle = document.getElementById('menuToggle');
+  var navMenu = document.getElementById('navMenu');
+  var header = document.getElementById('header');
+  var backToTop = document.getElementById('backToTop');
+  menuToggle.addEventListener('click', function() {
+    this.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menuToggle.classList.remove('open');
+      navMenu.classList.remove('open');
+    });
+  });
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+    backToTop.classList.toggle('visible', window.scrollY > 600);
+  });
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  var page = location.pathname.split('/').pop() || 'index.html';
+  var anchors = navMenu.querySelectorAll('a');
+  anchors.forEach(function(a) {
+    if (a.getAttribute('href') === page) {
+      a.classList.add('active');
+    }
+  });
+})();
+
+// Load news
+(function() {
+  var grid = document.getElementById('newsGrid');
+  var detail = document.getElementById('newsDetail');
+  var allNews = [];
+
+  function loadNews() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/content/news/index.json', true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        try {
+          allNews = JSON.parse(xhr.responseText);
+          renderNews(allNews);
+        } catch(e) {}
+      }
+    };
+    xhr.send();
+  }
+
+  function renderNews(newsList) {
+    if (!newsList || newsList.length === 0) {
+      grid.innerHTML = '<div class="news-empty"><div class="icon">📰</div><p>暂无新闻动态</p></div>';
+      return;
+    }
+    grid.innerHTML = newsList.map(function(item, i) {
+      var imgHtml = item.image
+        ? '<img src="' + item.image + '" alt="' + item.title + '">'
+        : '<span style="font-size:48px">📰</span>';
+      return '<div class="news-card" data-index="' + i + '">'
+        + '<div class="news-card-img">' + imgHtml + '</div>'
+        + '<div class="news-card-body">'
+        + '<h3>' + item.title + '</h3>'
+        + '<div class="news-date">' + item.date + '</div>'
+        + '<div class="news-summary">' + item.summary + '</div>'
+        + '</div></div>';
+    }).join('');
+
+    grid.querySelectorAll('.news-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var i = parseInt(this.getAttribute('data-index'));
+        showDetail(allNews[i]);
+      });
+    });
+  }
+
+  function showDetail(item) {
+    document.getElementById('detailTitle').textContent = item.title;
+    document.getElementById('detailDate').textContent = item.date;
+    document.getElementById('detailBody').innerHTML = item.body_html || item.body || '';
+    detail.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.getElementById('newsDetailClose').addEventListener('click', function() {
+    detail.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+  detail.addEventListener('click', function(e) {
+    if (e.target === detail) {
+      detail.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.getElementById('newsSearch').addEventListener('input', function() {
+    var q = this.value.toLowerCase();
+    var filtered = allNews.filter(function(item) {
+      return item.title.toLowerCase().indexOf(q) !== -1 || item.summary.toLowerCase().indexOf(q) !== -1;
+    });
+    renderNews(filtered);
+  });
+
+  loadNews();
+})();
+</script>
+</body>
+</html>
