@@ -7,12 +7,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- ==================== 顶部导航 ==================== -->
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
       <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="logo-img">
-      <span class="logo-text">索拉瑞科（成都）新能源科技</span>
+      <span class="logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="菜单">
       <span></span><span></span><span></span>
@@ -22,17 +21,17 @@
       <li><a href="about.html">关于我们</a></li>
       <li><a href="business.html">核心业务</a></li>
       <li><a href="tech.html">技术实力</a></li>
+      <li><a href="news.html">新闻动态</a></li>
       <li><a href="contact.html">联系我们</a></li>
     </ul>
   </div>
 </header>
-<!-- ==================== 联系我们 ==================== -->
 <section class="section section-top">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">CONTACT</div>
-      <h2 class="section-title">联系<span class="hl">我们</span></h2>
-      <p class="section-subtitle">期待与您携手，共创绿色能源未来</p>
+      <div class="section-tag" id="contact-tag">CONTACT</div>
+      <h2 class="section-title"><span id="contact-title-prefix">联系</span><span class="hl" id="contact-title-hl">我们</span></h2>
+      <p class="section-subtitle" id="contact-subtitle">期待与您携手，共创绿色能源未来</p>
     </div>
     <div class="contact-grid">
       <div>
@@ -41,21 +40,21 @@
             <div class="ico">📍</div>
             <div>
               <h4>公司地址</h4>
-              <p>四川省成都市双流区隆和西巷299号11楼1101号</p>
+              <p data-c="address">四川省成都市双流区隆和西巷299号11楼1101号</p>
             </div>
           </div>
           <div class="contact-info-item">
             <div class="ico">✉️</div>
             <div>
               <h4>电子邮箱</h4>
-              <p>like@gcsemi.cn</p>
+              <p data-c="email">like@gcsemi.cn</p>
             </div>
           </div>
           <div class="contact-info-item">
             <div class="ico">🕐</div>
             <div>
               <h4>工作时间</h4>
-              <p>周一至周五 9:00 - 17:30</p>
+              <p data-c="work_hours">周一至周五 9:00 - 17:30</p>
             </div>
           </div>
         </div>
@@ -105,14 +104,13 @@
     </div>
   </div>
 </section>
-<!-- ==================== 页脚 ==================== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo-wrap">
           <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="footer-logo-img">
-          <span class="footer-logo-text">索拉瑞科（成都）新能源科技</span>
+          <span class="footer-logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
         </div>
       </div>
       <div class="footer-col">
@@ -122,6 +120,7 @@
           <li><a href="about.html">关于我们</a></li>
           <li><a href="business.html">核心业务</a></li>
           <li><a href="tech.html">技术实力</a></li>
+          <li><a href="news.html">新闻动态</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -136,13 +135,13 @@
       <div class="footer-col">
         <h4>联系方式</h4>
         <ul>
-          <li><a>like@gcsemi.cn</a></li>
-          <li><a>四川省成都市双流区隆和西巷299号11楼1101号</a></li>
+          <li><a data-c="email">like@gcsemi.cn</a></li>
+          <li><a data-c="address">四川省成都市双流区隆和西巷299号11楼1101号</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 索拉瑞科（成都）新能源科技有限公司 版权所有</span>
+      <span>&copy; <span data-c="copyright_year">2026</span> <span data-c="company_full">索拉瑞科（成都）新能源科技有限公司</span> 版权所有</span>
       <div class="links">
         <a href="#">隐私政策</a>
         <a href="#">使用条款</a>
@@ -151,38 +150,32 @@
     </div>
   </div>
 </footer>
-
 <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 <div class="toast" id="toast"></div>
+<script src="js/content-loader.js"></script>
 <script>
 (function() {
   var menuToggle = document.getElementById('menuToggle');
   var navMenu = document.getElementById('navMenu');
   var header = document.getElementById('header');
   var backToTop = document.getElementById('backToTop');
-
   menuToggle.addEventListener('click', function() {
     this.classList.toggle('open');
     navMenu.classList.toggle('open');
   });
-
   navMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
       menuToggle.classList.remove('open');
       navMenu.classList.remove('open');
     });
   });
-
   window.addEventListener('scroll', function() {
     header.classList.toggle('scrolled', window.scrollY > 10);
     backToTop.classList.toggle('visible', window.scrollY > 600);
   });
-
   backToTop.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-  // 导航高亮
   var page = location.pathname.split('/').pop() || 'index.html';
   var anchors = navMenu.querySelectorAll('a');
   anchors.forEach(function(a) {
@@ -192,18 +185,15 @@
   });
 })();
 
-  // 表单提交
   var btnSubmit = document.getElementById('btnSubmit');
   if (btnSubmit) {
     btnSubmit.addEventListener('click', function() {
       var name = document.getElementById('formName').value.trim();
       var phone = document.getElementById('formPhone').value.trim();
       var msg = document.getElementById('formMsg').value.trim();
-
       if (!name) { showToast('请填写您的姓名'); return; }
       if (!phone) { showToast('请填写联系电话'); return; }
       if (!msg) { showToast('请填写咨询内容'); return; }
-
       showToast('提交成功！我们会尽快与您联系。');
       document.getElementById('formName').value = '';
       document.getElementById('formPhone').value = '';
@@ -212,7 +202,6 @@
       document.getElementById('formMsg').value = '';
     });
   }
-
   function showToast(message) {
     var toast = document.getElementById('toast');
     toast.textContent = message;
@@ -222,7 +211,6 @@
       toast.classList.remove('show');
     }, 2500);
   }
-
 </script>
 </body>
 </html>
