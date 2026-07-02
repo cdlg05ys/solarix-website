@@ -7,12 +7,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- ==================== 顶部导航 ==================== -->
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
       <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="logo-img">
-      <span class="logo-text">索拉瑞科（成都）新能源科技</span>
+      <span class="logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="菜单">
       <span></span><span></span><span></span>
@@ -22,83 +21,80 @@
       <li><a href="about.html">关于我们</a></li>
       <li><a href="business.html">核心业务</a></li>
       <li><a href="tech.html">技术实力</a></li>
+      <li><a href="news.html">新闻动态</a></li>
       <li><a href="contact.html">联系我们</a></li>
     </ul>
   </div>
 </header>
-<!-- ==================== 核心业务 ==================== -->
 <section class="section section-top">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">OUR BUSINESS</div>
-      <h2 class="section-title">核心<span class="hl">业务领域</span></h2>
-      <p class="section-subtitle">覆盖光伏、储能、智慧能源三大板块，提供一站式清洁能源解决方案</p>
+      <div class="section-tag" id="biz-tag">OUR BUSINESS</div>
+      <h2 class="section-title"><span id="biz-title-prefix">核心</span><span class="hl" id="biz-title-hl">业务领域</span></h2>
+      <p class="section-subtitle" id="biz-subtitle">覆盖光伏、储能、智慧能源三大板块，提供一站式清洁能源解决方案</p>
     </div>
     <div class="business-grid">
       <div class="biz-card">
         <div class="icon">☀️</div>
-        <h3>光伏发电系统</h3>
-        <p>分布式光伏电站设计、建设与运维，包含工商业屋顶光伏、农光互补、渔光互补等多种应用场景</p>
+        <h3 id="biz1-title">光伏发电系统</h3>
+        <p id="biz1-desc">分布式光伏电站设计、建设与运维，包含工商业屋顶光伏、农光互补、渔光互补等多种应用场景</p>
       </div>
       <div class="biz-card">
         <div class="icon">🔋</div>
-        <h3>储能系统集成</h3>
-        <p>工商业储能、家庭储能及大型储能电站系统集成，提供从电芯到系统级的全链条解决方案</p>
+        <h3 id="biz2-title">储能系统集成</h3>
+        <p id="biz2-desc">工商业储能、家庭储能及大型储能电站系统集成，提供从电芯到系统级的全链条解决方案</p>
       </div>
       <div class="biz-card">
         <div class="icon">🛗</div>
-        <h3>电梯节能</h3>
-        <p>电梯电能回馈及能量回收系统，将电梯运行中产生的再生电能回收利用，降低电梯能耗，实现建筑节能</p>
+        <h3 id="biz3-title">电梯节能</h3>
+        <p id="biz3-desc">电梯电能回馈及能量回收系统，将电梯运行中产生的再生电能回收利用，降低电梯能耗，实现建筑节能</p>
       </div>
       <div class="biz-card">
         <div class="icon">🏭</div>
-        <h3>工商业节能改造</h3>
-        <p>为企业提供能源审计、节能方案设计、EMC合同能源管理等综合能源服务</p>
+        <h3 id="biz4-title">工商业节能改造</h3>
+        <p id="biz4-desc">为企业提供能源审计、节能方案设计、EMC合同能源管理等综合能源服务</p>
       </div>
       <div class="biz-card">
         <div class="icon">🚗</div>
-        <h3>光储充一体化</h3>
-        <p>光电储一体化直流充电站，采用直流母线架构，无需光伏逆变，降低投资成本并提升系统效率</p>
+        <h3 id="biz5-title">光储充一体化</h3>
+        <p id="biz5-desc">光电储一体化直流充电站，采用直流母线架构，无需光伏逆变，降低投资成本并提升系统效率</p>
       </div>
       <div class="biz-card">
         <div class="icon">📊</div>
-        <h3>智慧能源管理平台</h3>
-        <p>基于物联网与AI技术的能源数据监测、分析、优化调度平台，实现能源使用可视化与智能化</p>
+        <h3 id="biz6-title">智慧能源管理平台</h3>
+        <p id="biz6-desc">基于物联网与AI技术的能源数据监测、分析、优化调度平台，实现能源使用可视化与智能化</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 光储充一体化详情 ==================== -->
 <section class="section section-alt feature-detail-section">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">PHOTOVOLTAIC · STORAGE · CHARGING</div>
-      <h2 class="section-title">光电储一体化<span class="hl">直流充电站</span></h2>
+      <div class="section-tag" id="charging-tag">PHOTOVOLTAIC · STORAGE · CHARGING</div>
+      <h2 class="section-title"><span id="charging-title-prefix">光电储一体化</span><span class="hl" id="charging-title-hl">直流充电站</span></h2>
     </div>
-
     <div class="feature-detail">
       <div class="feature-detail-text">
-        <h3>核心技术优势</h3>
+        <h3 id="charging-tech-title">核心技术优势</h3>
         <ul class="feature-list">
-          <li><span class="marker"></span>变电站容量大幅降低，适合电网薄弱地区</li>
-          <li><span class="marker"></span>采用直流母线，无需光伏逆变，仅用控制器即可</li>
-          <li><span class="marker"></span>系统由交流-直流，没有重复环节，降低投资、提高系统效率</li>
-          <li><span class="marker"></span>主要使用光伏发电与夜晚低谷时段电能，投资回报高</li>
+          <li><span class="marker"></span><span id="charging-tech-1">变电站容量大幅降低，适合电网薄弱地区</span></li>
+          <li><span class="marker"></span><span id="charging-tech-2">采用直流母线，无需光伏逆变，仅用控制器即可</span></li>
+          <li><span class="marker"></span><span id="charging-tech-3">系统由交流-直流，没有重复环节，降低投资、提高系统效率</span></li>
+          <li><span class="marker"></span><span id="charging-tech-4">主要使用光伏发电与夜晚低谷时段电能，投资回报高</span></li>
         </ul>
       </div>
       <div class="feature-detail-img">
         <img src="charging-station.png" alt="光电储一体化直流充电站">
       </div>
     </div>
-
     <div class="feature-detail reverse">
       <div class="feature-detail-img">
         <img src="monitor-center.png" alt="远程管理系统">
       </div>
       <div class="feature-detail-text">
-        <h3>远程管理系统</h3>
-        <p class="feature-desc">
+        <h3 id="charging-mgmt-title">远程管理系统</h3>
+        <p class="feature-desc" id="charging-mgmt-desc">
           由后台管理系统进行远程管理与控制；可根据安装地点的气候及天气状况进行电能优化管理，在保障充电站正常运营的前提下，最大化利用太阳能光伏发电，提高充电站运营收益。
         </p>
       </div>
@@ -106,53 +102,51 @@
   </div>
 </section>
 
-<!-- ==================== 系统优势及特点 ==================== -->
 <section class="section advantage-section">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">SYSTEM ADVANTAGES</div>
-      <h2 class="section-title">系统优势<span class="hl">及特点</span></h2>
+      <div class="section-tag" id="advantage-tag">SYSTEM ADVANTAGES</div>
+      <h2 class="section-title"><span id="advantage-title-prefix">系统优势</span><span class="hl" id="advantage-title-hl">及特点</span></h2>
     </div>
-
     <div class="advantage-intro">
       <div class="advantage-card" style="grid-area: top-left;">
         <div class="advantage-num">01</div>
-        <h4>对电网友好，可助电网削峰填谷</h4>
+        <h4 id="adv1-title">对电网友好，可助电网削峰填谷</h4>
         <ul>
-          <li>常规充电站五分之一的供电容量</li>
-          <li>深夜低谷时段用电</li>
-          <li>适合电网薄弱地区建站</li>
-          <li>助电网消纳低谷电量</li>
-          <li>实现削峰填谷</li>
-          <li>可在无电地区建设</li>
+          <li id="adv1-1">常规充电站五分之一的供电容量</li>
+          <li id="adv1-2">深夜低谷时段用电</li>
+          <li id="adv1-3">适合电网薄弱地区建站</li>
+          <li id="adv1-4">助电网消纳低谷电量</li>
+          <li id="adv1-5">实现削峰填谷</li>
+          <li id="adv1-6">可在无电地区建设</li>
         </ul>
       </div>
       <div class="advantage-card" style="grid-area: top-right;">
         <div class="advantage-num">02</div>
-        <h4>降低配电设施投资</h4>
+        <h4 id="adv2-title">降低配电设施投资</h4>
         <ul>
-          <li>降低电网配电容量</li>
-          <li>降低配电系统建设投资</li>
-          <li>充电站规模配置灵活</li>
-          <li>小规模充电站，可采用公共变压器低压供电，无需箱式安装</li>
+          <li id="adv2-1">降低电网配电容量</li>
+          <li id="adv2-2">降低配电系统建设投资</li>
+          <li id="adv2-3">充电站规模配置灵活</li>
+          <li id="adv2-4">小规模充电站，可采用公共变压器低压供电，无需箱式安装</li>
         </ul>
       </div>
       <div class="advantage-card" style="grid-area: bottom-left;">
         <div class="advantage-num">03</div>
-        <h4>审批程序简单、长期投资收益高</h4>
+        <h4 id="adv3-title">审批程序简单、长期投资收益高</h4>
         <ul>
-          <li>采用直流母线，光伏发电无需并网</li>
-          <li>电网公司只需按一般用户进行用电审批，流程简单</li>
+          <li id="adv3-1">采用直流母线，光伏发电无需并网</li>
+          <li id="adv3-2">电网公司只需按一般用户进行用电审批，流程简单</li>
         </ul>
       </div>
       <div class="advantage-card" style="grid-area: bottom-right;">
         <div class="advantage-num">04</div>
-        <h4>建设容易，可灵活搬迁</h4>
+        <h4 id="adv4-title">建设容易，可灵活搬迁</h4>
         <ul>
-          <li>一体化设计</li>
-          <li>现场安装简单</li>
-          <li>建设完成，设备接线即可投入使用</li>
-          <li>无需现场二次调试测试</li>
+          <li id="adv4-1">一体化设计</li>
+          <li id="adv4-2">现场安装简单</li>
+          <li id="adv4-3">建设完成，设备接线即可投入使用</li>
+          <li id="adv4-4">无需现场二次调试测试</li>
         </ul>
       </div>
       <div class="advantage-center" style="grid-area: center;">
@@ -162,14 +156,13 @@
   </div>
 </section>
 
-<!-- ==================== 页脚 ==================== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo-wrap">
           <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="footer-logo-img">
-          <span class="footer-logo-text">索拉瑞科（成都）新能源科技</span>
+          <span class="footer-logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
         </div>
       </div>
       <div class="footer-col">
@@ -179,6 +172,7 @@
           <li><a href="about.html">关于我们</a></li>
           <li><a href="business.html">核心业务</a></li>
           <li><a href="tech.html">技术实力</a></li>
+          <li><a href="news.html">新闻动态</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -193,13 +187,13 @@
       <div class="footer-col">
         <h4>联系方式</h4>
         <ul>
-          <li><a>like@gcsemi.cn</a></li>
-          <li><a>四川省成都市双流区隆和西巷299号11楼1101号</a></li>
+          <li><a data-c="email">like@gcsemi.cn</a></li>
+          <li><a data-c="address">四川省成都市双流区隆和西巷299号11楼1101号</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 索拉瑞科（成都）新能源科技有限公司 版权所有</span>
+      <span>&copy; <span data-c="copyright_year">2026</span> <span data-c="company_full">索拉瑞科（成都）新能源科技有限公司</span> 版权所有</span>
       <div class="links">
         <a href="#">隐私政策</a>
         <a href="#">使用条款</a>
@@ -208,38 +202,32 @@
     </div>
   </div>
 </footer>
-
 <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 <div class="toast" id="toast"></div>
+<script src="js/content-loader.js"></script>
 <script>
 (function() {
   var menuToggle = document.getElementById('menuToggle');
   var navMenu = document.getElementById('navMenu');
   var header = document.getElementById('header');
   var backToTop = document.getElementById('backToTop');
-
   menuToggle.addEventListener('click', function() {
     this.classList.toggle('open');
     navMenu.classList.toggle('open');
   });
-
   navMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
       menuToggle.classList.remove('open');
       navMenu.classList.remove('open');
     });
   });
-
   window.addEventListener('scroll', function() {
     header.classList.toggle('scrolled', window.scrollY > 10);
     backToTop.classList.toggle('visible', window.scrollY > 600);
   });
-
   backToTop.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-  // 导航高亮
   var page = location.pathname.split('/').pop() || 'index.html';
   var anchors = navMenu.querySelectorAll('a');
   anchors.forEach(function(a) {
