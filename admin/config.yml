@@ -1,0 +1,170 @@
+backend:
+  name: github
+  repo: cdlg05ys/solarix-website
+  branch: main
+  base_url: https://decap-cms-oauth.vercel.app
+
+media_folder: ""
+public_folder: ""
+
+collections:
+  - name: "site_settings"
+    label: "网站全局设置"
+    editor:
+      preview: false
+    files:
+      - label: "全局信息"
+        name: "site"
+        file: "content/site.json"
+        fields:
+          - label: "全局设置"
+            name: "global"
+            widget: "object"
+            fields:
+              - {label: "公司简称", name: "company_name", widget: "string"}
+              - {label: "公司全称", name: "company_full", widget: "string"}
+              - {label: "电子邮箱", name: "email", widget: "string"}
+              - {label: "公司地址", name: "address", widget: "string"}
+              - {label: "工作时间", name: "work_hours", widget: "string"}
+              - {label: "版权年份", name: "copyright_year", widget: "string"}
+          - label: "首页内容"
+            name: "index"
+            widget: "object"
+            fields:
+              - {label: "Hero标签", name: "hero_badge", widget: "string"}
+              - {label: "Hero标题前缀", name: "hero_title_prefix", widget: "string"}
+              - {label: "Hero标题高亮", name: "hero_title_accent", widget: "string"}
+              - {label: "Hero标题后缀", name: "hero_title_suffix", widget: "string"}
+              - {label: "公司简介", name: "hero_desc", widget: "text"}
+              - {label: "数据1数值", name: "stat1_num", widget: "string"}
+              - {label: "数据1标签", name: "stat1_label", widget: "string"}
+              - {label: "数据2数值", name: "stat2_num", widget: "string"}
+              - {label: "数据2标签", name: "stat2_label", widget: "string"}
+              - {label: "数据3数值", name: "stat3_num", widget: "string"}
+              - {label: "数据3标签", name: "stat3_label", widget: "string"}
+              - {label: "数据4数值", name: "stat4_num", widget: "string"}
+              - {label: "数据4标签", name: "stat4_label", widget: "string"}
+          - label: "关于我们"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Section标签", name: "section_tag", widget: "string"}
+              - {label: "标题前缀", name: "section_title_prefix", widget: "string"}
+              - {label: "标题高亮", name: "section_title_hl", widget: "string"}
+              - {label: "副标题", name: "section_subtitle", widget: "string"}
+              - {label: "公司描述", name: "description", widget: "text"}
+              - {label: "使命标题", name: "mission_title", widget: "string"}
+              - {label: "使命描述", name: "mission_desc", widget: "string"}
+              - {label: "愿景标题", name: "vision_title", widget: "string"}
+              - {label: "愿景描述", name: "vision_desc", widget: "string"}
+              - {label: "价值观标题", name: "values_title", widget: "string"}
+              - {label: "价值观描述", name: "values_desc", widget: "string"}
+              - {label: "资质卡片标题", name: "card_title", widget: "string"}
+              - {label: "资质卡片描述", name: "card_desc", widget: "text"}
+              - {label: "认证1", name: "cert1", widget: "string"}
+              - {label: "认证2", name: "cert2", widget: "string"}
+              - {label: "认证3", name: "cert3", widget: "string"}
+              - {label: "认证4", name: "cert4", widget: "string"}
+          - label: "核心业务"
+            name: "business"
+            widget: "object"
+            fields:
+              - {label: "Section标签", name: "section_tag", widget: "string"}
+              - {label: "标题前缀", name: "section_title_prefix", widget: "string"}
+              - {label: "标题高亮", name: "section_title_hl", widget: "string"}
+              - {label: "副标题", name: "section_subtitle", widget: "string"}
+              - {label: "业务1标题", name: "biz1_title", widget: "string"}
+              - {label: "业务1描述", name: "biz1_desc", widget: "text"}
+              - {label: "业务2标题", name: "biz2_title", widget: "string"}
+              - {label: "业务2描述", name: "biz2_desc", widget: "text"}
+              - {label: "业务3标题", name: "biz3_title", widget: "string"}
+              - {label: "业务3描述", name: "biz3_desc", widget: "text"}
+              - {label: "业务4标题", name: "biz4_title", widget: "string"}
+              - {label: "业务4描述", name: "biz4_desc", widget: "text"}
+              - {label: "业务5标题", name: "biz5_title", widget: "string"}
+              - {label: "业务5描述", name: "biz5_desc", widget: "text"}
+              - {label: "业务6标题", name: "biz6_title", widget: "string"}
+              - {label: "业务6描述", name: "biz6_desc", widget: "text"}
+              - {label: "充电站Tag", name: "charging_tag", widget: "string"}
+              - {label: "充电站标题前缀", name: "charging_title_prefix", widget: "string"}
+              - {label: "充电站标题高亮", name: "charging_title_hl", widget: "string"}
+              - {label: "技术优势标题", name: "charging_tech_title", widget: "string"}
+              - {label: "技术优势1", name: "charging_tech_1", widget: "string"}
+              - {label: "技术优势2", name: "charging_tech_2", widget: "string"}
+              - {label: "技术优势3", name: "charging_tech_3", widget: "string"}
+              - {label: "技术优势4", name: "charging_tech_4", widget: "string"}
+              - {label: "远程管理标题", name: "charging_mgmt_title", widget: "string"}
+              - {label: "远程管理描述", name: "charging_mgmt_desc", widget: "text"}
+              - {label: "优势Tag", name: "advantage_tag", widget: "string"}
+              - {label: "优势标题前缀", name: "advantage_title_prefix", widget: "string"}
+              - {label: "优势标题高亮", name: "advantage_title_hl", widget: "string"}
+              - {label: "优势1标题", name: "adv1_title", widget: "string"}
+              - {label: "优势1-1", name: "adv1_1", widget: "string"}
+              - {label: "优势1-2", name: "adv1_2", widget: "string"}
+              - {label: "优势1-3", name: "adv1_3", widget: "string"}
+              - {label: "优势1-4", name: "adv1_4", widget: "string"}
+              - {label: "优势1-5", name: "adv1_5", widget: "string"}
+              - {label: "优势1-6", name: "adv1_6", widget: "string"}
+              - {label: "优势2标题", name: "adv2_title", widget: "string"}
+              - {label: "优势2-1", name: "adv2_1", widget: "string"}
+              - {label: "优势2-2", name: "adv2_2", widget: "string"}
+              - {label: "优势2-3", name: "adv2_3", widget: "string"}
+              - {label: "优势2-4", name: "adv2_4", widget: "string"}
+              - {label: "优势3标题", name: "adv3_title", widget: "string"}
+              - {label: "优势3-1", name: "adv3_1", widget: "string"}
+              - {label: "优势3-2", name: "adv3_2", widget: "string"}
+              - {label: "优势4标题", name: "adv4_title", widget: "string"}
+              - {label: "优势4-1", name: "adv4_1", widget: "string"}
+              - {label: "优势4-2", name: "adv4_2", widget: "string"}
+              - {label: "优势4-3", name: "adv4_3", widget: "string"}
+              - {label: "优势4-4", name: "adv4_4", widget: "string"}
+          - label: "技术实力"
+            name: "tech"
+            widget: "object"
+            fields:
+              - {label: "Section标签", name: "section_tag", widget: "string"}
+              - {label: "标题前缀", name: "section_title_prefix", widget: "string"}
+              - {label: "标题高亮", name: "section_title_hl", widget: "string"}
+              - {label: "副标题", name: "section_subtitle", widget: "string"}
+              - {label: "技术1标题", name: "tech1_title", widget: "string"}
+              - {label: "技术1描述", name: "tech1_desc", widget: "string"}
+              - {label: "技术2标题", name: "tech2_title", widget: "string"}
+              - {label: "技术2描述", name: "tech2_desc", widget: "string"}
+              - {label: "技术3标题", name: "tech3_title", widget: "string"}
+              - {label: "技术3描述", name: "tech3_desc", widget: "string"}
+              - {label: "技术4标题", name: "tech4_title", widget: "string"}
+              - {label: "技术4描述", name: "tech4_desc", widget: "string"}
+              - {label: "技术5标题", name: "tech5_title", widget: "string"}
+              - {label: "技术5描述", name: "tech5_desc", widget: "string"}
+              - {label: "专利数量", name: "patent_num", widget: "string"}
+              - {label: "专利标签", name: "patent_label", widget: "string"}
+              - {label: "标签1", name: "tag1", widget: "string"}
+              - {label: "标签2", name: "tag2", widget: "string"}
+              - {label: "标签3", name: "tag3", widget: "string"}
+              - {label: "标签4", name: "tag4", widget: "string"}
+              - {label: "标签5", name: "tag5", widget: "string"}
+              - {label: "标签6", name: "tag6", widget: "string"}
+          - label: "联系我们"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Section标签", name: "section_tag", widget: "string"}
+              - {label: "标题前缀", name: "section_title_prefix", widget: "string"}
+              - {label: "标题高亮", name: "section_title_hl", widget: "string"}
+              - {label: "副标题", name: "section_subtitle", widget: "string"}
+
+  - name: "news"
+    label: "新闻动态"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: json
+    format: json
+    editor:
+      preview: false
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "摘要", name: "summary", widget: "text"}
+      - {label: "封面图片", name: "image", widget: "image", required: false}
+      - {label: "正文内容", name: "body", widget: "markdown"}
