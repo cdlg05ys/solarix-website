@@ -7,12 +7,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- ==================== 顶部导航 ==================== -->
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
       <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="logo-img">
-      <span class="logo-text">索拉瑞科（成都）新能源科技</span>
+      <span class="logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="菜单">
       <span></span><span></span><span></span>
@@ -22,79 +21,78 @@
       <li><a href="about.html">关于我们</a></li>
       <li><a href="business.html">核心业务</a></li>
       <li><a href="tech.html">技术实力</a></li>
+      <li><a href="news.html">新闻动态</a></li>
       <li><a href="contact.html">联系我们</a></li>
     </ul>
   </div>
 </header>
-<!-- ==================== 技术实力 ==================== -->
 <section class="section section-top section-alt">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">TECHNOLOGY</div>
-      <h2 class="section-title">核心<span class="hl">技术实力</span></h2>
-      <p class="section-subtitle">持续研发投入，构建技术竞争壁垒</p>
+      <div class="section-tag" id="tech-tag">TECHNOLOGY</div>
+      <h2 class="section-title"><span id="tech-title-prefix">核心</span><span class="hl" id="tech-title-hl">技术实力</span></h2>
+      <p class="section-subtitle" id="tech-subtitle">持续研发投入，构建技术竞争壁垒</p>
     </div>
     <div class="tech-grid">
       <div class="tech-list">
         <div class="tech-item">
           <div class="n">01</div>
           <div>
-            <h4>高效光伏组件技术</h4>
-            <p>采用N型TOPCon高效电池技术，组件转换效率突破23.5%</p>
+            <h4 id="tech1-title">高效光伏组件技术</h4>
+            <p id="tech1-desc">采用N型TOPCon高效电池技术，组件转换效率突破23.5%</p>
           </div>
         </div>
         <div class="tech-item">
           <div class="n">02</div>
           <div>
-            <h4>智能MPPT算法</h4>
-            <p>自研多峰值MPPT追踪算法，阴影遮挡下发电效率提升15%</p>
+            <h4 id="tech2-title">智能MPPT算法</h4>
+            <p id="tech2-desc">自研多峰值MPPT追踪算法，阴影遮挡下发电效率提升15%</p>
           </div>
         </div>
         <div class="tech-item">
           <div class="n">03</div>
           <div>
-            <h4>BMS电池管理系统</h4>
-            <p>多层安全防护架构，支持SOC/SOH精准估算，循环寿命超6000次</p>
+            <h4 id="tech3-title">BMS电池管理系统</h4>
+            <p id="tech3-desc">多层安全防护架构，支持SOC/SOH精准估算，循环寿命超6000次</p>
           </div>
         </div>
         <div class="tech-item">
           <div class="n">04</div>
           <div>
-            <h4>AI能源调度引擎</h4>
-            <p>基于深度学习的光伏发电预测与负荷预测，优化储能充放电策略</p>
+            <h4 id="tech4-title">AI能源调度引擎</h4>
+            <p id="tech4-desc">基于深度学习的光伏发电预测与负荷预测，优化储能充放电策略</p>
           </div>
         </div>
         <div class="tech-item">
           <div class="n">05</div>
           <div>
-            <h4>云边协同架构</h4>
-            <p>边缘计算+云端大数据平台，实现百万级设备接入与毫秒级响应</p>
+            <h4 id="tech5-title">云边协同架构</h4>
+            <p id="tech5-desc">边缘计算+云端大数据平台，实现百万级设备接入与毫秒级响应</p>
           </div>
         </div>
       </div>
       <div class="tech-highlight">
-        <div class="big">35+</div>
-        <div class="big-label">自主研发专利技术</div>
+        <div class="big" id="patent-num">35+</div>
+        <div class="big-label" id="patent-label">自主研发专利技术</div>
         <div class="tech-tags">
-          <span>光伏技术</span>
-          <span>储能系统</span>
-          <span>能源管理</span>
-          <span>AI算法</span>
-          <span>物联网</span>
-          <span>电力电子</span>
+          <span id="tag1">光伏技术</span>
+          <span id="tag2">储能系统</span>
+          <span id="tag3">能源管理</span>
+          <span id="tag4">AI算法</span>
+          <span id="tag5">物联网</span>
+          <span id="tag6">电力电子</span>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- ==================== 页脚 ==================== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo-wrap">
           <img src="logo.png" alt="索拉瑞科（成都）新能源科技" class="footer-logo-img">
-          <span class="footer-logo-text">索拉瑞科（成都）新能源科技</span>
+          <span class="footer-logo-text" data-c="company_name">索拉瑞科（成都）新能源科技</span>
         </div>
       </div>
       <div class="footer-col">
@@ -104,6 +102,7 @@
           <li><a href="about.html">关于我们</a></li>
           <li><a href="business.html">核心业务</a></li>
           <li><a href="tech.html">技术实力</a></li>
+          <li><a href="news.html">新闻动态</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -118,13 +117,13 @@
       <div class="footer-col">
         <h4>联系方式</h4>
         <ul>
-          <li><a>like@gcsemi.cn</a></li>
-          <li><a>四川省成都市双流区隆和西巷299号11楼1101号</a></li>
+          <li><a data-c="email">like@gcsemi.cn</a></li>
+          <li><a data-c="address">四川省成都市双流区隆和西巷299号11楼1101号</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 索拉瑞科（成都）新能源科技有限公司 版权所有</span>
+      <span>&copy; <span data-c="copyright_year">2026</span> <span data-c="company_full">索拉瑞科（成都）新能源科技有限公司</span> 版权所有</span>
       <div class="links">
         <a href="#">隐私政策</a>
         <a href="#">使用条款</a>
@@ -133,38 +132,32 @@
     </div>
   </div>
 </footer>
-
 <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 <div class="toast" id="toast"></div>
+<script src="js/content-loader.js"></script>
 <script>
 (function() {
   var menuToggle = document.getElementById('menuToggle');
   var navMenu = document.getElementById('navMenu');
   var header = document.getElementById('header');
   var backToTop = document.getElementById('backToTop');
-
   menuToggle.addEventListener('click', function() {
     this.classList.toggle('open');
     navMenu.classList.toggle('open');
   });
-
   navMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
       menuToggle.classList.remove('open');
       navMenu.classList.remove('open');
     });
   });
-
   window.addEventListener('scroll', function() {
     header.classList.toggle('scrolled', window.scrollY > 10);
     backToTop.classList.toggle('visible', window.scrollY > 600);
   });
-
   backToTop.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-  // 导航高亮
   var page = location.pathname.split('/').pop() || 'index.html';
   var anchors = navMenu.querySelectorAll('a');
   anchors.forEach(function(a) {
